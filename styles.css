@@ -5,10 +5,11 @@
   box-sizing: border-box;
 }
 
-main {
+body{
   min-height: 100vh;
   display: grid;
   place-items: center;
+  background-color: rgb(238, 237, 237);
 }
 
 .title-container{
@@ -16,43 +17,101 @@ main {
 }
 
 .line{
-  background-color: rgb(108, 127, 248);
+  background-color: rgb(5, 126, 126);
   width: 6rem;
-  height: 0.5rem;
-  margin-bottom: 1rem;
+  height: 0.3rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 3rem;
 }
 
 .review-container{
-  display: grid;
-  place-items: center;
+  background: rgb(255, 255, 255);
+  width: 80vw;
+  max-width: 620px;
+  border-radius: 0.6rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 
-.img-container::after {
+
+.img-container {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+#reviewer-img{
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img-container::before{
+  content: "";
+  position: absolute;
+  top: -0.18rem;
+  right: -0.45rem;
+  background-color: rgb(5, 126, 126);
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.img-container::after{
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  color: whitesmoke;
+  background-color: rgb(5, 126, 126);
+  padding: 0.5rem;
+  border-radius: 50%;
   content: "\f10e";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  transform: translateY(25%);
-  background: var(--clr-primary-5);
-  color: var(--clr-white);
+  right: 7rem;
+  top: -0.1rem;
+
 }
-.img-container::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: var(--clr-primary-5);
-  position: absolute;
-  top: -0.25rem;
-  right: -0.5rem;
-  border-radius: 50%;
+
+#job{
+  margin: 0;
+  padding: 0.5rem;
+  color: rgb(5, 126, 126);
 }
+
+#author{
+  margin: 0;
+}
+
+.random-btn{
+  border-color: rgb(5, 126, 126);
+  border-radius: 0.2rem;
+  color: rgb(5, 126, 126);
+  padding: 0.2rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.random-btn:hover{
+  background-color:rgb(5, 126, 126);
+  color:aliceblue;
+}
+
+.chevron{
+  color: rgb(5, 126, 126); 
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.chevron:hover{
+  color:rgb(3, 63, 63);
+}
+
